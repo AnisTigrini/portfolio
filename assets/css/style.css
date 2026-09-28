@@ -354,6 +354,22 @@ main {
   border-radius: 8px;
 }
 
+.info-content .cert-badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: max-content;
+  margin-top: 6px;
+  padding: 3px 12px;
+  border-radius: 8px;
+  background: var(--onyx);
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-500);
+}
+
+.info-content .cert-badge ion-icon { font-size: 13px; }
+
 .info_more-btn {
   position: absolute;
   top: -15px;
@@ -1887,6 +1903,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .info-content .title { margin: auto; }
+
+  .info-content .cert-badge { margin: 8px auto 0; }
 
   .info_more-btn { display: none; }
 

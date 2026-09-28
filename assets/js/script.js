@@ -134,6 +134,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
 const translations = {
   en: {
     role: "Full-Stack Developer",
+    certBadge: "CKAD Certified",
     showContacts: "Show Contacts",
     email: "Email",
     phone: "Phone",
@@ -147,19 +148,22 @@ const translations = {
 
     aboutTitle: "About me",
     aboutP1: "Versatile software development professional, successful at producing robust systems to meet diverse customer needs. I manage projects and teams to accomplish challenging timelines, exploring technical capabilities and pushing boundaries to exceed expectations.",
-    aboutP2: "With experience spanning full-stack web development, cloud-native microservices and DevOps, I enjoy turning complex problems into reliable, maintainable solutions. In my spare time I sharpen my skills with LeetCode and ethical hacking on platforms like TryHackMe.",
+    aboutP2: "With experience spanning full-stack web development, cloud-native microservices and DevOps, I enjoy turning complex problems into reliable, maintainable solutions. As a Certified Kubernetes Application Developer (CKAD), I design, build and ship cloud-native applications that run reliably in production. In my spare time I sharpen my skills with LeetCode and ethical hacking on platforms like TryHackMe.",
 
     serviceTitle: "What I'm doing",
     service1Title: "Full-Stack Development",
     service1Text: "Building and maintaining web applications end to end with Angular, React and .NET APIs.",
-    service2Title: "Cloud & DevOps",
-    service2Text: "Migrating workloads to Kubernetes (AKS) microservices, building Helm charts and automating scaling.",
+    service2Title: "Cloud-Native & Kubernetes",
+    service2Text: "CKAD-certified: containerizing and deploying microservices on Kubernetes (AKS), writing Helm charts, and automating scaling, health checks and rollouts.",
     service3Title: "Mobile & MDM Solutions",
     service3Text: "Developing Windows and iOS Mobile Device Management solutions for enterprise customers.",
     service4Title: "Design Systems",
     service4Text: "Crafting reusable Web Components and automating design-token extraction through the Figma API.",
 
     resumeTitle: "Resume",
+    certTitle: "Certifications",
+    cert1Title: "Certified Kubernetes Application Developer (CKAD) — CNCF & The Linux Foundation",
+    cert1Text: "Passed the performance-based, hands-on CKAD exam, proving the ability to design, build, configure and expose cloud-native applications on Kubernetes: multi-container Pods, Deployments and rolling updates, ConfigMaps and Secrets, probes and observability, Services and Ingress, NetworkPolicies, Jobs and CronJobs, resource management and Helm.",
     educationTitle: "Education",
     edu1Title: "BSc Computer Science — Laval University",
     edu1Text: "Bachelor of Science in Computer Science, completed in 2023 with a 3.47 GPA.",
@@ -199,6 +203,7 @@ const translations = {
 
   fr: {
     role: "Développeur Full-Stack",
+    certBadge: "Certifié CKAD",
     showContacts: "Afficher les contacts",
     email: "Courriel",
     phone: "Téléphone",
@@ -212,19 +217,22 @@ const translations = {
 
     aboutTitle: "À propos de moi",
     aboutP1: "Professionnel polyvalent du développement logiciel, habitué à concevoir des systèmes robustes répondant à des besoins clients variés. Je gère des projets et des équipes pour respecter des échéanciers exigeants, en explorant les possibilités techniques et en repoussant les limites pour dépasser les attentes.",
-    aboutP2: "Fort d'une expérience couvrant le développement web full-stack, les microservices infonuagiques et le DevOps, j'aime transformer des problèmes complexes en solutions fiables et maintenables. À mes heures, je perfectionne mes compétences avec LeetCode et le piratage éthique sur des plateformes comme TryHackMe.",
+    aboutP2: "Fort d'une expérience couvrant le développement web full-stack, les microservices infonuagiques et le DevOps, j'aime transformer des problèmes complexes en solutions fiables et maintenables. Certifié Kubernetes Application Developer (CKAD), je conçois, développe et déploie des applications infonuagiques natives qui fonctionnent de façon fiable en production. À mes heures, je perfectionne mes compétences avec LeetCode et le piratage éthique sur des plateformes comme TryHackMe.",
 
     serviceTitle: "Ce que je fais",
     service1Title: "Développement Full-Stack",
     service1Text: "Conception et maintenance d'applications web de bout en bout avec Angular, React et des API .NET.",
-    service2Title: "Infonuagique & DevOps",
-    service2Text: "Migration des charges de travail vers des microservices Kubernetes (AKS), création de chartes Helm et automatisation de la mise à l'échelle.",
+    service2Title: "Infonuagique & Kubernetes",
+    service2Text: "Certifié CKAD : conteneurisation et déploiement de microservices sur Kubernetes (AKS), création de chartes Helm et automatisation de la mise à l'échelle, des sondes de santé et des déploiements progressifs.",
     service3Title: "Mobilité & MDM",
     service3Text: "Développement de solutions de gestion des appareils mobiles (MDM) Windows et iOS pour des clients d'entreprise.",
     service4Title: "Systèmes de design",
     service4Text: "Création de Web Components réutilisables et automatisation de l'extraction des jetons de design via l'API Figma.",
 
     resumeTitle: "CV",
+    certTitle: "Certifications",
+    cert1Title: "Certified Kubernetes Application Developer (CKAD) — CNCF & The Linux Foundation",
+    cert1Text: "Réussite de l'examen pratique CKAD, basé sur des mises en situation réelles, démontrant la capacité à concevoir, développer, configurer et exposer des applications infonuagiques natives sur Kubernetes : Pods multi-conteneurs, Deployments et mises à jour progressives, ConfigMaps et Secrets, sondes et observabilité, Services et Ingress, NetworkPolicies, Jobs et CronJobs, gestion des ressources et Helm.",
     educationTitle: "Formation",
     edu1Title: "B. Sc. Informatique — Université Laval",
     edu1Text: "Baccalauréat en informatique, terminé en 2023 avec une moyenne de 3,47/4,3.",
