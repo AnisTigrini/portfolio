@@ -975,12 +975,189 @@ main {
 
 .badge-title { margin-bottom: 6px; }
 
+/* live badge titles come from TryHackMe as-is (e.g. "cat linux.txt") */
+.badge-list.is-live .badge-title { text-transform: none; }
+
 .badge-text {
   color: var(--light-gray-70);
   font-size: var(--fs-7);
   font-weight: var(--fw-300);
   line-height: 1.5;
 }
+
+.badge-rarity {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 2px 10px;
+  border-radius: 6px;
+  background: var(--onyx);
+  color: var(--light-gray-70);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-500);
+}
+
+.badge-rarity[data-tier="rare"] { color: hsl(205, 85%, 70%); }
+
+.badge-rarity[data-tier="epic"] { color: hsl(275, 70%, 75%); }
+
+.badge-rarity[data-tier="legendary"] { color: var(--orange-yellow-crayola); }
+
+
+/**
+ * TryHackMe stats + activity
+ */
+
+.thm-stats,
+.thm-activity { margin: 10px 0 35px; }
+
+.thm-section-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 6px 15px;
+  margin-bottom: 20px;
+}
+
+.thm-profile-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-500);
+}
+
+.thm-profile-link:hover,
+.thm-profile-link:focus-visible { text-decoration: underline; }
+
+.stat-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.stat-item {
+  padding: 15px;
+  cursor: default;
+}
+
+.stat-label {
+  color: var(--light-gray-70);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-500);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.stat-value {
+  color: var(--white-2);
+  font-size: var(--fs-1);
+  font-weight: var(--fw-600);
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-item--highlight .stat-value {
+  background: var(--text-gradient-yellow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-sub {
+  color: var(--light-gray-70);
+  font-size: var(--fs-8);
+  margin-top: 4px;
+  font-variant-numeric: tabular-nums;
+}
+
+.activity-total {
+  color: var(--light-gray-70);
+  font-size: var(--fs-7);
+}
+
+.heatmap-card {
+  --cell: 11px;
+
+  padding: 18px;
+  cursor: default;
+}
+
+.heatmap-scroll {
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scrollbar-width: thin;
+}
+
+.heatmap {
+  display: grid;
+  grid-template-rows: auto repeat(7, var(--cell));
+  grid-auto-columns: var(--cell);
+  gap: 3px;
+  width: max-content;
+  font-size: 10px;
+  color: var(--light-gray-70);
+}
+
+.heatmap-weekday {
+  grid-column: 1;
+  width: max-content;
+  padding-right: 6px;
+  line-height: var(--cell);
+}
+
+.heatmap-month {
+  grid-row: 1;
+  white-space: nowrap;
+  line-height: 1;
+  padding-bottom: 4px;
+}
+
+.heatmap-cell {
+  display: block;
+  width: var(--cell);
+  height: var(--cell);
+  border-radius: 3px;
+  background: hsl(240, 1%, 21%);
+}
+
+.heatmap-cell[data-level="1"] { background: hsla(45, 100%, 72%, 0.3); }
+
+.heatmap-cell[data-level="2"] { background: hsla(45, 100%, 72%, 0.5); }
+
+.heatmap-cell[data-level="3"] { background: hsla(45, 100%, 72%, 0.75); }
+
+.heatmap-cell[data-level="4"] { background: var(--orange-yellow-crayola); }
+
+.heatmap-cell.is-future { opacity: 0.35; }
+
+.heatmap-cell.is-today { outline: 1px solid var(--light-gray-70); outline-offset: 1px; }
+
+.heatmap-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.thm-updated {
+  color: var(--light-gray-70);
+  font-size: var(--fs-8);
+}
+
+.heatmap-legend {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: var(--light-gray-70);
+  font-size: var(--fs-8);
+}
+
+.heatmap-legend span { margin: 0 4px; }
 
 @media (prefers-reduced-motion: reduce) {
   .badge-item,
@@ -1711,6 +1888,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .badge-item { flex-basis: calc(33.333% - 13.34px); padding: 20px; }
 
+  .stat-list { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+  .stat-item { padding: 18px 20px; }
+
 
 
   /**
@@ -1878,6 +2059,16 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .project-list { grid-template-columns: repeat(3, 1fr); }
+
+
+
+  /**
+   * SECURITY
+   */
+
+  .badge-list.is-live .badge-item { flex-basis: calc(25% - 15px); padding: 18px 15px; }
+
+  .badge-list.is-live .badge-img { max-width: 100px; }
 
 
 

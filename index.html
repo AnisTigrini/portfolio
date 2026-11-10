@@ -622,11 +622,91 @@
           </p>
         </section>
 
+        <section class="thm-stats" data-thm-stats hidden>
+
+          <div class="thm-section-head">
+            <h3 class="h3" data-i18n="thmStatsTitle">TryHackMe Stats</h3>
+
+            <a href="https://tryhackme.com/p/cuticletive61" target="_blank" rel="noopener" class="thm-profile-link">
+              <span data-i18n="thmViewProfile">View profile</span>
+              <ion-icon name="open-outline"></ion-icon>
+            </a>
+          </div>
+
+          <ul class="stat-list">
+
+            <li class="stat-item content-card stat-item--highlight">
+              <p class="stat-label" data-i18n="statRankLabel">Global ranking</p>
+              <p class="stat-value" data-thm-stat="top"></p>
+              <p class="stat-sub" data-thm-stat="rank"></p>
+            </li>
+
+            <li class="stat-item content-card">
+              <p class="stat-label" data-i18n="statRoomsLabel">Rooms completed</p>
+              <p class="stat-value" data-thm-stat="rooms"></p>
+            </li>
+
+            <li class="stat-item content-card">
+              <p class="stat-label" data-i18n="statBadgesLabel">Badges earned</p>
+              <p class="stat-value" data-thm-stat="badges"></p>
+            </li>
+
+            <li class="stat-item content-card">
+              <p class="stat-label" data-i18n="statLevelLabel">Level</p>
+              <p class="stat-value" data-thm-stat="level"></p>
+            </li>
+
+            <li class="stat-item content-card">
+              <p class="stat-label" data-i18n="statPointsLabel">Points</p>
+              <p class="stat-value" data-thm-stat="points"></p>
+            </li>
+
+            <li class="stat-item content-card">
+              <p class="stat-label" data-i18n="statStreakLabel">Longest streak</p>
+              <p class="stat-value" data-thm-stat="streak"></p>
+            </li>
+
+          </ul>
+
+        </section>
+
+        <section class="thm-activity" data-thm-activity hidden>
+
+          <div class="thm-section-head">
+            <h3 class="h3" data-i18n="activityTitle">Hacking Activity</h3>
+
+            <p class="activity-total" data-thm-activity-total></p>
+          </div>
+
+          <div class="heatmap-card content-card">
+
+            <div class="heatmap-scroll" data-heatmap-scroll>
+              <div class="heatmap" data-heatmap role="img"></div>
+            </div>
+
+            <div class="heatmap-footer">
+              <p class="thm-updated" data-thm-updated></p>
+
+              <div class="heatmap-legend" aria-hidden="true">
+                <span data-i18n="activityLess">Less</span>
+                <i class="heatmap-cell" data-level="0"></i>
+                <i class="heatmap-cell" data-level="1"></i>
+                <i class="heatmap-cell" data-level="2"></i>
+                <i class="heatmap-cell" data-level="3"></i>
+                <i class="heatmap-cell" data-level="4"></i>
+                <span data-i18n="activityMore">More</span>
+              </div>
+            </div>
+
+          </div>
+
+        </section>
+
         <section class="security-badges">
 
           <h3 class="h3 security-subtitle" data-i18n="badgesTitle">TryHackMe Badges</h3>
 
-          <ul class="badge-list">
+          <ul class="badge-list" data-thm-badges>
 
             <li class="badge-item content-card">
               <figure class="badge-img">

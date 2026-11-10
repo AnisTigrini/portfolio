@@ -9,6 +9,10 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+  # Redeploys daily so the TryHackMe stats stay fresh
+  schedule:
+    - cron: "0 9 * * *"
+
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -31,6 +35,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Refresh TryHackMe stats
+        # If TryHackMe refuses the request, the committed assets/data/thm.json is deployed as-is
+        continue-on-error: true
+        run: node scripts/update-thm-data.mjs
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

@@ -1,0 +1,27 @@
+{
+  "updatedAt": "2026-11-10T00:00:00.000Z",
+  "username": "cuticletive61",
+  "profile": {
+    "level": 10,
+    "rank": 80296,
+    "topPercentage": 3,
+    "totalPoints": 13037,
+    "badgesNumber": 13,
+    "completedRoomsNumber": 105,
+    "streak": 4,
+    "largestStreak": 62,
+    "leagueTier": "silver"
+  },
+  "badges": null,
+  "activity": {
+    "year": 2026,
+    "totalCount": 446,
+    "days": [
+      { "date": "2026-10-22", "count": 40, "level": 4, "breakdown": { "questions": 30, "rooms": 10, "machines": 0, "quizzes": 0, "recaps": 0 } },
+      { "date": "2026-11-05", "count": 82, "level": 4, "breakdown": { "questions": 61, "rooms": 16, "machines": 5, "quizzes": 0, "recaps": 0 } },
+      { "date": "2026-11-06", "count": 91, "level": 4, "breakdown": { "questions": 71, "rooms": 15, "machines": 5, "quizzes": 0, "recaps": 0 } },
+      { "date": "2026-11-07", "count": 106, "level": 4, "breakdown": { "questions": 86, "rooms": 16, "machines": 4, "quizzes": 0, "recaps": 0 } },
+      { "date": "2026-11-08", "count": 127, "level": 4, "breakdown": { "questions": 107, "rooms": 12, "machines": 8, "quizzes": 0, "recaps": 0 } }
+    ]
+  }
+}
