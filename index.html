@@ -122,16 +122,23 @@
           <li class="social-item">
             <a href="https://ca.linkedin.com/in/anis-tigrini-11b00b17a" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
               <ion-icon name="logo-linkedin"></ion-icon>
+              <span class="print-only">linkedin.com/in/anis-tigrini-11b00b17a</span>
             </a>
           </li>
 
           <li class="social-item">
             <a href="https://github.com/AnisTigrini" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
               <ion-icon name="logo-github"></ion-icon>
+              <span class="print-only">github.com/AnisTigrini</span>
             </a>
           </li>
 
         </ul>
+
+        <a href="./cv/anis-tigrini-cv-en.pdf" class="cv-download cv-download--sidebar" download data-cv-link>
+          <ion-icon name="download-outline"></ion-icon>
+          <span data-i18n="downloadCv">Download CV</span>
+        </a>
 
       </div>
 
@@ -193,6 +200,7 @@
 
         <header>
           <h2 class="h2 article-title" data-i18n="aboutTitle">About me</h2>
+          <h3 class="h3 print-only print-heading" data-i18n="printProfile">Profile</h3>
         </header>
 
         <section class="about-text">
@@ -305,7 +313,14 @@
           <h2 class="h2 article-title" data-i18n="resumeTitle">Resume</h2>
         </header>
 
-        <section class="timeline">
+        <div class="cv-actions">
+          <a href="./cv/anis-tigrini-cv-en.pdf" class="cv-download" download data-cv-link>
+            <ion-icon name="download-outline"></ion-icon>
+            <span data-i18n="downloadCv">Download CV</span>
+          </a>
+        </div>
+
+        <section class="timeline timeline--certs">
 
           <div class="title-wrapper">
             <div class="icon-box">
@@ -336,7 +351,7 @@
 
         </section>
 
-        <section class="timeline">
+        <section class="timeline timeline--education">
 
           <div class="title-wrapper">
             <div class="icon-box">
@@ -364,7 +379,7 @@
 
         </section>
 
-        <section class="timeline">
+        <section class="timeline timeline--experience">
 
           <div class="title-wrapper">
             <div class="icon-box">
@@ -423,6 +438,7 @@
         <section class="skill">
 
           <h3 class="h3 skills-title" data-i18n="skillsTitle">My Skills</h3>
+          <h3 class="h3 print-only print-heading" data-i18n="printSkills">Skills</h3>
 
           <div class="skills-tags content-card">
 
@@ -542,7 +558,7 @@
           <ul class="project-list">
 
             <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://budget.finecho.pro" target="_blank" rel="noopener">
+              <a href="https://budget.finecho.pro" target="_blank" rel="noopener" data-print-url="budget.finecho.pro">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -560,7 +576,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://finecho.pro" target="_blank" rel="noopener">
+              <a href="https://finecho.pro" target="_blank" rel="noopener" data-print-url="finecho.pro">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -578,7 +594,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="library">
-              <a href="https://www.npmjs.com/package/country-flags-svg-v2" target="_blank" rel="noopener">
+              <a href="https://www.npmjs.com/package/country-flags-svg-v2" target="_blank" rel="noopener" data-print-url="npmjs.com/package/country-flags-svg-v2">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -631,6 +647,8 @@
               <span data-i18n="thmViewProfile">View profile</span>
               <ion-icon name="open-outline"></ion-icon>
             </a>
+
+            <span class="print-only thm-print-url">tryhackme.com/p/cuticletive61</span>
           </div>
 
           <ul class="stat-list">

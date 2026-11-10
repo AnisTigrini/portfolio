@@ -147,6 +147,10 @@ const translations = {
     navSecurity: "Security",
     navContact: "Contact",
 
+    downloadCv: "Download CV",
+    printProfile: "Profile",
+    printSkills: "Skills",
+
     aboutTitle: "About me",
     aboutP1: "Versatile software development professional, successful at producing robust systems to meet diverse customer needs. I manage projects and teams to accomplish challenging timelines, exploring technical capabilities and pushing boundaries to exceed expectations.",
     aboutP2: "With experience spanning full-stack web development, cloud-native microservices and DevOps, I enjoy turning complex problems into reliable, maintainable solutions. As a Certified Kubernetes Application Developer (CKAD), I design, build and ship cloud-native applications that run reliably in production. In my spare time I sharpen my skills with LeetCode and ethical hacking on platforms like TryHackMe.",
@@ -257,6 +261,10 @@ const translations = {
     navPortfolio: "Portfolio",
     navSecurity: "Sécurité",
     navContact: "Contact",
+
+    downloadCv: "Télécharger le CV",
+    printProfile: "Profil",
+    printSkills: "Compétences",
 
     aboutTitle: "À propos de moi",
     aboutP1: "Professionnel polyvalent du développement logiciel, habitué à concevoir des systèmes robustes répondant à des besoins clients variés. Je gère des projets et des équipes pour respecter des échéanciers exigeants, en explorant les possibilités techniques et en repoussant les limites pour dépasser les attentes.",
@@ -373,6 +381,12 @@ const applyLanguage = function (lang) {
   });
 
   document.documentElement.setAttribute("lang", lang);
+
+  // point the "Download CV" links at the PDF in the current language
+  document.querySelectorAll("[data-cv-link]").forEach(function (link) {
+    link.setAttribute("href", "./cv/anis-tigrini-cv-" + lang + ".pdf");
+    link.setAttribute("download", "Anis-Tigrini-CV-" + lang.toUpperCase() + ".pdf");
+  });
   // button shows the language it switches TO
   if (langBtn) langBtn.textContent = lang === "en" ? "FR" : "EN";
 
@@ -386,7 +400,12 @@ const savedLang = (function () {
   try { return localStorage.getItem("lang"); } catch (e) { return null; }
 })();
 
-applyLanguage(savedLang === "fr" ? "fr" : "en");
+// ?lang=fr|en in the URL wins (used by scripts/build-cv.sh to print each language)
+const urlLang = (function () {
+  try { return new URLSearchParams(window.location.search).get("lang"); } catch (e) { return null; }
+})();
+
+applyLanguage(urlLang === "fr" || urlLang === "en" ? urlLang : (savedLang === "fr" ? "fr" : "en"));
 
 if (langBtn) {
   langBtn.addEventListener("click", function () {

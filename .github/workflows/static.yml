@@ -39,6 +39,10 @@ jobs:
         # If TryHackMe refuses the request, the committed assets/data/thm.json is deployed as-is
         continue-on-error: true
         run: node scripts/update-thm-data.mjs
+      - name: Build CV PDFs
+        # Prints the resume (index.html's print stylesheet) to cv/anis-tigrini-cv-{en,fr}.pdf.
+        # Not optional: the site's "Download CV" buttons link to these files.
+        run: bash scripts/build-cv.sh
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

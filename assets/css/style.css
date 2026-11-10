@@ -2240,3 +2240,469 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+
+
+
+/*-----------------------------------*\
+  #CV DOWNLOAD
+\*-----------------------------------*/
+
+.print-only { display: none; }
+
+.cv-actions { margin: -5px 0 25px; }
+
+.cv-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 15px;
+  border: 1px solid var(--jet);
+  border-radius: 10px;
+  background: var(--onyx);
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-500);
+  transition: background var(--transition-1);
+}
+
+.cv-download:hover,
+.cv-download:focus-visible { background: var(--jet); }
+
+.cv-download ion-icon { font-size: 16px; }
+
+.cv-download--sidebar { margin-top: 16px; }
+
+
+
+
+
+/*-----------------------------------*\
+  #PRINT — renders the page as a one-page resume
+  (used by scripts/build-cv.sh to produce cv/anis-tigrini-cv-{en,fr}.pdf)
+\*-----------------------------------*/
+
+@media print {
+
+  @page {
+    size: letter;
+    margin: 9mm 13mm;
+  }
+
+  :root {
+    --ink: hsl(240, 6%, 12%);
+    --ink-muted: hsl(240, 4%, 36%);
+    --rule: hsl(240, 5%, 84%);
+    --accent: hsl(38, 85%, 40%);
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    color: var(--ink);
+    font-size: 8.5pt;
+    line-height: 1.38;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .print-only { display: initial; }
+
+
+  /* --- hidden in print --- */
+
+  .navbar,
+  ion-icon,
+  .avatar-box,
+  .contact-item .icon-box,
+  .info_more-btn,
+  .separator,
+  .contact-title,
+  .cv-download,
+  .cv-actions,
+  .resume > header,
+  .about .article-title,
+  .service,
+  .resume .skills-title:not(.print-only),
+  .title-wrapper .icon-box,
+  .filter-list,
+  .filter-select-box,
+  .project-img,
+  .security > .about-text,
+  .thm-profile-link,
+  .thm-activity,
+  .security-badges,
+  article.contact { display: none !important; }
+
+
+  /* --- reset the screen layout --- */
+
+  main,
+  .main-content {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    width: auto !important;
+  }
+
+  .sidebar,
+  article,
+  .content-card {
+    position: static !important;
+    background: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    cursor: auto;
+  }
+
+  .content-card::before,
+  .article-title::after,
+  .timeline-item::before,
+  .timeline-item::after { display: none !important; }
+
+  article { display: block !important; }
+
+  /* experience first, then certifications, education, skills; security before projects */
+  .main-content {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  article.about { order: 1; }
+  article.resume { order: 2; display: flex !important; flex-direction: column; }
+  article.security { order: 3; }
+  article.portfolio { order: 4; }
+
+  .timeline--experience { order: 1; }
+  .timeline--certs { order: 2; }
+  .timeline--education { order: 3; }
+  .resume > .skill { order: 4; }
+
+  .h2,
+  .h3,
+  .h4,
+  .h5 { color: var(--ink); }
+
+  /* use the source casing (the screen styles capitalize every word) */
+  .h4,
+  .h5,
+  .project-title { text-transform: none !important; }
+
+  a { color: inherit; }
+
+
+  /* --- header (sidebar) --- */
+
+  .sidebar {
+    padding-bottom: 7pt !important;
+    margin-bottom: 4pt !important;
+    border-bottom: 1.5pt solid var(--accent) !important;
+  }
+
+  .sidebar-info,
+  .info-content { display: block !important; }
+
+  .info-content .name {
+    color: var(--ink);
+    font-size: 21pt;
+    font-weight: 600;
+    letter-spacing: -0.3pt;
+    line-height: 1.1;
+    margin: 0 0 2pt;
+    text-align: left;
+  }
+
+  .info-content .title,
+  .info-content .cert-badge {
+    display: inline-block !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    font-size: 10.5pt;
+    font-weight: 500;
+    color: var(--ink-muted);
+  }
+
+  .info-content .cert-badge { color: var(--accent); }
+
+  .info-content .title::after { content: "\00a0·\00a0"; color: var(--ink-muted); }
+
+  .sidebar-info_more {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 12pt;
+    margin-top: 4pt;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .contacts-list,
+  .social-list {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 0 12pt;
+    padding: 0;
+  }
+
+  .contact-item,
+  .contact-info { display: block; min-width: 0; width: auto; max-width: none; }
+
+  .contact-info :is(.contact-link, time, address),
+  .social-item .social-link {
+    color: var(--ink);
+    font-size: 8.5pt;
+  }
+
+
+  /* --- section headings --- */
+
+  .print-heading,
+  .timeline .title-wrapper .h3,
+  .portfolio .article-title,
+  .security .article-title {
+    display: block;
+    color: var(--accent);
+    font-size: 9.5pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8pt;
+    padding: 0 0 1.5pt;
+    margin: 7pt 0 3.5pt;
+    border-bottom: 0.75pt solid var(--rule);
+    break-after: avoid;
+  }
+
+  .timeline .title-wrapper { display: block; margin: 0; }
+
+  .about > header,
+  .security > header,
+  .portfolio > header { margin: 0; }
+
+
+  /* --- profile --- */
+
+  .about-text {
+    margin: 0 !important;
+    color: var(--ink);
+    font-size: 8.5pt;
+    line-height: 1.38;
+  }
+
+  .about-text p { margin: 0 0 3pt; }
+
+
+  /* --- experience, certifications, education --- */
+
+  .timeline { margin: 0; }
+
+  .timeline-list { margin: 0; font-size: 8.5pt; }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 10pt;
+    break-inside: avoid;
+  }
+
+  .timeline-item:not(:last-child) { margin-bottom: 4pt; }
+
+  .timeline-item-title {
+    color: var(--ink);
+    font-size: 9.3pt;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .timeline-list span {
+    color: var(--ink-muted);
+    font-size: 8.3pt;
+    font-weight: 500;
+    white-space: nowrap;
+    line-height: 1.4;
+  }
+
+  .timeline-text {
+    grid-column: 1 / -1;
+    color: var(--ink);
+    line-height: 1.38;
+  }
+
+
+  /* --- skills and focus areas: one line per group --- */
+
+  .skills-tags { padding: 0 !important; }
+
+  .skills-group {
+    display: flex;
+    gap: 6pt;
+    margin: 0 0 1.5pt !important;
+  }
+
+  .skills-group .h5 {
+    flex: 0 0 auto;
+    color: var(--ink);
+    font-size: 8.5pt;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .skills-group .h5::after { content: ":"; }
+
+  .tag-list { display: block; }
+
+  .tag {
+    display: inline;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    color: var(--ink);
+    font-size: 8.5pt;
+    font-weight: 400;
+  }
+
+  .tag:not(:last-child)::after { content: " · "; color: var(--ink-muted); }
+
+
+  /* --- cybersecurity: stats as one line, focus areas as tags --- */
+
+  .thm-stats { margin: 0 0 2pt; }
+
+  .thm-stats .thm-section-head,
+  .thm-stats .thm-section-head .h3 { display: inline; margin: 0; }
+
+  .thm-print-url::before { content: " ("; }
+
+  .thm-print-url::after { content: "): "; color: var(--ink); }
+
+  .thm-stats .thm-section-head .h3 {
+    color: var(--ink);
+    font-size: 8.5pt;
+    font-weight: 600;
+    text-transform: none;
+  }
+
+  .thm-print-url { color: var(--ink-muted); }
+
+  .stat-list { display: inline; }
+
+  .stat-list .stat-item { display: inline; padding: 0 !important; }
+
+  .stat-item:not(:last-child)::after { content: " · "; color: var(--ink-muted); }
+
+  .stat-label,
+  .stat-value,
+  .stat-sub {
+    display: inline;
+    margin: 0;
+    color: var(--ink);
+    font-size: 8.5pt;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+    line-height: 1.38;
+  }
+
+  .stat-label { color: var(--ink-muted); }
+
+  .stat-label::after { content: ": "; }
+
+  .stat-value { font-weight: 600; }
+
+  .stat-item--highlight .stat-value {
+    background: none;
+    -webkit-text-fill-color: currentColor;
+  }
+
+  .stat-sub:not(:empty)::before { content: " ("; }
+
+  .stat-sub:not(:empty)::after { content: ")"; }
+
+  .security .skill {
+    display: flex;
+    gap: 6pt;
+    margin: 0;
+  }
+
+  .security .skill .skills-title {
+    flex: 0 0 auto;
+    margin: 0;
+    color: var(--ink);
+    font-size: 8.5pt;
+    font-weight: 600;
+    text-transform: none;
+  }
+
+  .security .skill .skills-title::after { content: ":"; }
+
+
+  /* --- projects: name — description — url --- */
+
+  .projects { margin: 0; }
+
+  .project-list {
+    display: block !important;
+    margin: 0;
+  }
+
+  .project-item {
+    display: block !important;
+    break-inside: avoid;
+    margin-bottom: 1.5pt;
+    animation: none;
+  }
+
+  .project-item > a { display: block; }
+
+  .project-title,
+  .project-category {
+    display: inline;
+    margin: 0;
+    color: var(--ink);
+    font-size: 8.5pt;
+    text-transform: none;
+  }
+
+  .project-title { font-weight: 600; }
+
+  .project-category::before { content: " — "; color: var(--ink-muted); }
+
+  /* keep each section's heading with its content */
+  article.security,
+  article.portfolio,
+  .timeline,
+  .resume > .skill { break-inside: avoid; }
+
+  /* French typography: non-breaking space before colons */
+  html[lang="fr"] .skills-group .h5::after,
+  html[lang="fr"] .security .skill .skills-title::after { content: "\00a0:"; }
+
+  html[lang="fr"] .stat-label::after { content: "\00a0: "; }
+
+  html[lang="fr"] .thm-print-url::after { content: ")\00a0: "; }
+
+  .project-item > a::after {
+    content: " — " attr(data-print-url);
+    color: var(--accent);
+  }
+
+}
