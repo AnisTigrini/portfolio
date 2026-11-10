@@ -228,6 +228,8 @@ const translations = {
     rarityRare: "Rare",
     rarityEpic: "Epic",
     rarityLegendary: "Legendary",
+    badgesShowAll: "Show all {n} badges",
+    badgesShowLess: "Show fewer",
     focusLinux: "Linux administration",
     focusNetworking: "Network fundamentals",
     focusPentest: "Penetration testing",
@@ -337,6 +339,8 @@ const translations = {
     rarityRare: "Rare",
     rarityEpic: "Épique",
     rarityLegendary: "Légendaire",
+    badgesShowAll: "Afficher les {n} badges",
+    badgesShowLess: "Afficher moins",
     focusLinux: "Administration Linux",
     focusNetworking: "Fondements des réseaux",
     focusPentest: "Tests d'intrusion",
@@ -545,12 +549,60 @@ if (langBtn) {
 
   // --- badges (replace the static fallback cards) ---
 
+  // long badge lists are collapsed to the first BADGE_PREVIEW badges behind a "Show all" button
+  const BADGE_PREVIEW = 12;
+  const BADGE_COLLAPSE_OVER = 16;
+  const badgeToggle = document.querySelector("[data-badge-toggle]");
+  let badgesExpanded = false;
+
+  const updateBadgeToggle = function () {
+    const items = badgeList.children;
+    const collapsible = items.length > BADGE_COLLAPSE_OVER;
+
+    for (let i = 0; i < items.length; i++) {
+      items[i].hidden = collapsible && !badgesExpanded && i >= BADGE_PREVIEW;
+    }
+
+    if (!badgeToggle) return;
+    badgeToggle.hidden = !collapsible;
+    badgeToggle.setAttribute("aria-expanded", String(badgesExpanded));
+    badgeToggle.textContent = badgesExpanded
+      ? tr("badgesShowLess")
+      : tr("badgesShowAll", { n: num(items.length) });
+  };
+
+  // keep a badge's description popover inside the badge list horizontally
+  const placeBadgePopover = function (event) {
+    const item = event.target.closest && event.target.closest(".badge-item");
+    const popover = item && item.querySelector(".badge-text");
+    if (!popover) return;
+
+    popover.style.setProperty("--shift", "0px");
+    const bounds = badgeList.getBoundingClientRect();
+    const rect = popover.getBoundingClientRect();
+    let shift = 0;
+    if (rect.left < bounds.left) shift = bounds.left - rect.left;
+    else if (rect.right > bounds.right) shift = bounds.right - rect.right;
+    popover.style.setProperty("--shift", shift + "px");
+  };
+
+  badgeList.addEventListener("mouseover", placeBadgePopover);
+  badgeList.addEventListener("focusin", placeBadgePopover);
+
+  if (badgeToggle) {
+    badgeToggle.addEventListener("click", function () {
+      badgesExpanded = !badgesExpanded;
+      updateBadgeToggle();
+    });
+  }
+
   const renderBadges = function (badges) {
     if (!Array.isArray(badges) || badges.length === 0) return;
 
     const items = badges.map(function (badge) {
       const item = document.createElement("li");
       item.className = "badge-item content-card";
+      item.tabIndex = 0;
 
       if (typeof badge.image === "string" && badge.image.indexOf("https://") === 0) {
         const figure = document.createElement("figure");
@@ -592,6 +644,7 @@ if (langBtn) {
 
     badgeList.classList.add("is-live");
     badgeList.replaceChildren.apply(badgeList, items);
+    updateBadgeToggle();
   };
 
 
