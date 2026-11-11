@@ -133,7 +133,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 const translations = {
   en: {
-    role: "Full-Stack Developer",
+    role: "Backend & Cloud Developer",
     certBadge: "CKAD Certified",
     showContacts: "Show Contacts",
     email: "Email",
@@ -152,12 +152,12 @@ const translations = {
     printSkills: "Skills",
 
     aboutTitle: "About me",
-    aboutP1: "Versatile software development professional, successful at producing robust systems to meet diverse customer needs. I manage projects and teams to accomplish challenging timelines, exploring technical capabilities and pushing boundaries to exceed expectations.",
-    aboutP2: "With experience spanning full-stack web development, cloud-native microservices and DevOps, I enjoy turning complex problems into reliable, maintainable solutions. As a Certified Kubernetes Application Developer (CKAD), I design, build and ship cloud-native applications that run reliably in production. In my spare time I sharpen my skills with LeetCode and ethical hacking on platforms like TryHackMe.",
+    aboutP1: "Backend and cloud developer with full-stack experience. I run projects end to end, from design to production, and train colleagues along the way. At Cybertech, I migrated around 50 microservices from on-premise Windows servers to Azure Kubernetes Service (AKS).",
+    aboutP2: "As a Certified Kubernetes Application Developer (CKAD), I design, build and ship cloud-native services that run reliably in production. I also designed and built Finecho on my own, a platform that ingests SEC filings as they are published and makes them searchable. In my spare time I sharpen my skills with LeetCode and ethical hacking on TryHackMe.",
 
     serviceTitle: "What I'm doing",
-    service1Title: "Full-Stack Development",
-    service1Text: "Building and maintaining web applications end to end with Angular, React and .NET APIs.",
+    service1Title: "Backend & APIs",
+    service1Text: "Designing and building .NET APIs and backend services, with Angular and React front ends when the project needs them.",
     service2Title: "Cloud-Native & Kubernetes",
     service2Text: "CKAD-certified: containerizing and deploying microservices on Kubernetes (AKS), writing Helm charts, and automating scaling, health checks and rollouts.",
     service3Title: "Mobile & MDM Solutions",
@@ -175,7 +175,7 @@ const translations = {
     experienceTitle: "Experience",
     exp1Title: "Full-Stack Developer — Cybertech Inc",
     exp1Date: "April 2023 — Present",
-    exp1Text: "Maintaining and adding features to an Angular-based website and .NET APIs. Migrated the company's resources and software from Windows servers to an AKS microservice architecture. Developed Windows and iOS MDM solutions for customers to use.",
+    exp1Text: "Migrated around 50 microservices from on-premise Windows servers to Azure Kubernetes Service (AKS), containerizing them and deploying them with Helm. Run projects end to end, from design to production, and train colleagues. Build and maintain .NET APIs and an Angular web application, and developed Windows and iOS MDM solutions for customers.",
     exp2Title: "DevOps Developer Intern — GoTo",
     exp2Date: "December 2021 — April 2022",
     exp2Text: "Autoscaling PostgreSQL pods through the HorizontalPodAutoscaler (HPA) feature of Kubernetes, integrating the HPA into a Kubernetes Operator (Zalando), and creating Helm charts to ease installation of resources.",
@@ -195,8 +195,8 @@ const translations = {
     filterLibrary: "Library",
     selectCategory: "Select category",
     project1Category: "Double-entry accounting & budgeting",
-    project2Category: "Market intelligence platform",
-    project3Category: "npm package · 4,000+ weekly downloads",
+    project2Category: "Live SEC filings ingestion & search · built solo",
+    project3Category: "npm package · 8,000+ weekly downloads",
 
     securityTitle: "Cybersecurity",
     securityP1: "Alongside software development, I practice offensive and defensive security through hands-on labs on TryHackMe. Breaking into deliberately vulnerable systems helps me understand how attackers think, and I apply that mindset to build and ship applications that are secure by design.",
@@ -248,7 +248,7 @@ const translations = {
   },
 
   fr: {
-    role: "Développeur Full-Stack",
+    role: "Développeur backend et infonuagique",
     certBadge: "Certifié CKAD",
     showContacts: "Afficher les contacts",
     email: "Courriel",
@@ -267,12 +267,12 @@ const translations = {
     printSkills: "Compétences",
 
     aboutTitle: "À propos de moi",
-    aboutP1: "Professionnel polyvalent du développement logiciel, habitué à concevoir des systèmes robustes répondant à des besoins clients variés. Je gère des projets et des équipes pour respecter des échéanciers exigeants, en explorant les possibilités techniques et en repoussant les limites pour dépasser les attentes.",
-    aboutP2: "Fort d'une expérience couvrant le développement web full-stack, les microservices infonuagiques et le DevOps, j'aime transformer des problèmes complexes en solutions fiables et maintenables. Certifié Kubernetes Application Developer (CKAD), je conçois, développe et déploie des applications infonuagiques natives qui fonctionnent de façon fiable en production. À mes heures, je perfectionne mes compétences avec LeetCode et le piratage éthique sur des plateformes comme TryHackMe.",
+    aboutP1: "Développeur backend et infonuagique avec une expérience full-stack. Je mène des projets de bout en bout, de la conception à la production, et je forme mes collègues en cours de route. Chez Cybertech, j'ai migré une cinquantaine de microservices de serveurs Windows sur site vers Azure Kubernetes Service (AKS).",
+    aboutP2: "Certifié Kubernetes Application Developer (CKAD), je conçois, développe et déploie des services infonuagiques natifs qui fonctionnent de façon fiable en production. J'ai aussi conçu et développé seul Finecho, une plateforme qui ingère les dépôts SEC dès leur publication et les rend consultables. À mes heures, je perfectionne mes compétences avec LeetCode et le piratage éthique sur TryHackMe.",
 
     serviceTitle: "Ce que je fais",
-    service1Title: "Développement Full-Stack",
-    service1Text: "Conception et maintenance d'applications web de bout en bout avec Angular, React et des API .NET.",
+    service1Title: "Backend & API",
+    service1Text: "Conception et développement d'API .NET et de services backend, avec des interfaces Angular et React au besoin.",
     service2Title: "Infonuagique & Kubernetes",
     service2Text: "Certifié CKAD : conteneurisation et déploiement de microservices sur Kubernetes (AKS), création de chartes Helm et automatisation de la mise à l'échelle, des sondes de santé et des déploiements progressifs.",
     service3Title: "Mobilité & MDM",
@@ -290,7 +290,7 @@ const translations = {
     experienceTitle: "Expérience",
     exp1Title: "Développeur Full-Stack — Cybertech Inc",
     exp1Date: "Avril 2023 — Aujourd'hui",
-    exp1Text: "Maintenance et ajout de fonctionnalités à un site web Angular et à des API .NET. Migration des ressources et logiciels de l'entreprise de serveurs Windows vers une architecture de microservices AKS. Développement de solutions MDM Windows et iOS pour les clients.",
+    exp1Text: "Migration d'une cinquantaine de microservices de serveurs Windows sur site vers Azure Kubernetes Service (AKS), avec conteneurisation et déploiement par Helm. Gestion de projets de bout en bout, de la conception à la production, et formation des collègues. Développement et maintenance d'API .NET et d'une application web Angular, et développement de solutions MDM Windows et iOS pour les clients.",
     exp2Title: "Stagiaire développeur DevOps — GoTo",
     exp2Date: "Décembre 2021 — Avril 2022",
     exp2Text: "Mise à l'échelle automatique de pods PostgreSQL grâce à la fonctionnalité HorizontalPodAutoscaler (HPA) de Kubernetes, intégration du HPA dans un opérateur Kubernetes (Zalando) et création de chartes Helm pour faciliter l'installation des ressources.",
@@ -310,8 +310,8 @@ const translations = {
     filterLibrary: "Bibliothèque",
     selectCategory: "Choisir une catégorie",
     project1Category: "Comptabilité en partie double & budgets",
-    project2Category: "Plateforme d'intelligence de marché",
-    project3Category: "Paquet npm · 4 000+ téléchargements/semaine",
+    project2Category: "Ingestion et recherche de dépôts SEC en direct · projet solo",
+    project3Category: "Paquet npm · 8 000+ téléchargements/semaine",
 
     securityTitle: "Cybersécurité",
     securityP1: "En parallèle du développement logiciel, je pratique la sécurité offensive et défensive au moyen de laboratoires pratiques sur TryHackMe. M'introduire dans des systèmes volontairement vulnérables m'aide à comprendre la façon de penser des attaquants, et j'applique cet état d'esprit pour concevoir et livrer des applications sécurisées dès la conception.",

@@ -2379,7 +2379,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   article { display: block !important; }
 
-  /* experience first, then certifications, education, skills; security before projects */
+  /* experience first, then certifications, education, skills; projects before security */
   .main-content {
     display: flex !important;
     flex-direction: column;
@@ -2387,8 +2387,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   article.about { order: 1; }
   article.resume { order: 2; display: flex !important; flex-direction: column; }
-  article.security { order: 3; }
-  article.portfolio { order: 4; }
+  article.portfolio { order: 3; }
+  article.security { order: 4; }
 
   .timeline--experience { order: 1; }
   .timeline--certs { order: 2; }
