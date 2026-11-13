@@ -197,6 +197,7 @@ const translations = {
     project1Category: "Double-entry accounting & budgeting",
     project2Category: "Live SEC filings ingestion & search · built solo",
     project3Category: "npm package · 8,000+ weekly downloads",
+    project4Category: "React hook · maintained fork of use-dark-mode",
 
     securityTitle: "Cybersecurity",
     securityP1: "Alongside software development, I practice offensive and defensive security through hands-on labs on TryHackMe. Breaking into deliberately vulnerable systems helps me understand how attackers think, and I apply that mindset to build and ship applications that are secure by design.",
@@ -312,6 +313,7 @@ const translations = {
     project1Category: "Comptabilité en partie double & budgets",
     project2Category: "Ingestion et recherche de dépôts SEC en direct · projet solo",
     project3Category: "Paquet npm · 8 000+ téléchargements/semaine",
+    project4Category: "Hook React · fork maintenu de use-dark-mode",
 
     securityTitle: "Cybersécurité",
     securityP1: "En parallèle du développement logiciel, je pratique la sécurité offensive et défensive au moyen de laboratoires pratiques sur TryHackMe. M'introduire dans des systèmes volontairement vulnérables m'aide à comprendre la façon de penser des attaquants, et j'applique cet état d'esprit pour concevoir et livrer des applications sécurisées dès la conception.",
