@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T00:00:00.000Z",
+  "updatedAt": "2026-11-16T00:00:00.000Z",
   "username": "cuticletive61",
   "profile": {
     "level": 10,
@@ -15,13 +15,116 @@
   "badges": null,
   "activity": {
     "year": 2026,
-    "totalCount": 446,
+    "totalCount": 658,
     "days": [
-      { "date": "2026-10-22", "count": 40, "level": 4, "breakdown": { "questions": 30, "rooms": 10, "machines": 0, "quizzes": 0, "recaps": 0 } },
-      { "date": "2026-11-05", "count": 82, "level": 4, "breakdown": { "questions": 61, "rooms": 16, "machines": 5, "quizzes": 0, "recaps": 0 } },
-      { "date": "2026-11-06", "count": 91, "level": 4, "breakdown": { "questions": 71, "rooms": 15, "machines": 5, "quizzes": 0, "recaps": 0 } },
-      { "date": "2026-11-07", "count": 106, "level": 4, "breakdown": { "questions": 86, "rooms": 16, "machines": 4, "quizzes": 0, "recaps": 0 } },
-      { "date": "2026-11-08", "count": 127, "level": 4, "breakdown": { "questions": 107, "rooms": 12, "machines": 8, "quizzes": 0, "recaps": 0 } }
+      {
+        "date": "2026-10-22",
+        "count": 40,
+        "level": 4,
+        "breakdown": {
+          "questions": 30,
+          "rooms": 10,
+          "machines": 0,
+          "quizzes": 0,
+          "recaps": 0
+        }
+      },
+      {
+        "date": "2026-11-05",
+        "count": 82,
+        "level": 4,
+        "breakdown": {
+          "questions": 61,
+          "rooms": 16,
+          "machines": 5,
+          "quizzes": 0,
+          "recaps": 0
+        }
+      },
+      {
+        "date": "2026-11-06",
+        "count": 91,
+        "level": 4,
+        "breakdown": {
+          "questions": 71,
+          "rooms": 15,
+          "machines": 5,
+          "quizzes": 0,
+          "recaps": 0
+        }
+      },
+      {
+        "date": "2026-11-07",
+        "count": 106,
+        "level": 4,
+        "breakdown": {
+          "questions": 86,
+          "rooms": 16,
+          "machines": 4,
+          "quizzes": 0,
+          "recaps": 0
+        }
+      },
+      {
+        "date": "2026-11-08",
+        "count": 127,
+        "level": 4,
+        "breakdown": {
+          "questions": 107,
+          "rooms": 12,
+          "machines": 8,
+          "quizzes": 0,
+          "recaps": 0
+        }
+      },
+      {
+        "date": "2026-11-10",
+        "count": 72,
+        "level": 4,
+        "breakdown": {
+          "questions": 66,
+          "rooms": 4,
+          "machines": 2,
+          "quizzes": 0,
+          "recaps": 0
+        }
+      },
+      {
+        "date": "2026-11-11",
+        "count": 48,
+        "level": 4,
+        "breakdown": {
+          "questions": 37,
+          "rooms": 5,
+          "machines": 6,
+          "quizzes": 0,
+          "recaps": 0
+        }
+      },
+      {
+        "date": "2026-11-12",
+        "count": 62,
+        "level": 4,
+        "breakdown": {
+          "questions": 48,
+          "rooms": 10,
+          "machines": 4,
+          "quizzes": 0,
+          "recaps": 0
+        }
+      },
+      {
+        "date": "2026-11-16",
+        "count": 30,
+        "level": 4,
+        "breakdown": {
+          "questions": 27,
+          "rooms": 2,
+          "machines": 1,
+          "quizzes": 0,
+          "recaps": 0
+        }
+      }
     ]
   }
 }
