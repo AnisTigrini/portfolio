@@ -184,10 +184,11 @@ const translations = {
     exp3Text: "Front-end development of a design system using TypeScript and React, automation of design-token extraction through the Figma API, and building and shipping reusable Web Components for other teams.",
 
     skillsTitle: "My Skills",
-    skillsLanguages: "Languages",
-    skillsFrameworks: "Frameworks & Libraries",
+    skillsCloud: "Cloud & DevOps",
+    skillsBackend: "Backend",
     skillsData: "Databases",
-    skillsDevops: "DevOps & Tools",
+    skillsFrontend: "Frontend",
+    skillRestApis: "REST APIs",
 
     portfolioTitle: "Portfolio",
     filterAll: "All",
@@ -300,10 +301,11 @@ const translations = {
     exp3Text: "Développement front-end d'un système de design avec TypeScript et React, automatisation de l'extraction des jetons de design via l'API Figma, et création de Web Components réutilisables pour les autres équipes.",
 
     skillsTitle: "Mes compétences",
-    skillsLanguages: "Langages",
-    skillsFrameworks: "Cadriciels & bibliothèques",
+    skillsCloud: "Infonuagique & DevOps",
+    skillsBackend: "Backend",
     skillsData: "Bases de données",
-    skillsDevops: "DevOps & outils",
+    skillsFrontend: "Frontend",
+    skillRestApis: "API REST",
 
     portfolioTitle: "Portfolio",
     filterAll: "Tout",
